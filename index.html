@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo a Pantalla Completa</title>
+
+  <style>
+    /* Quita márgenes y rellenos del navegador */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* El modelo ocupa toda la pantalla */
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      background-color: #000; /* Fondo negro opcional */
+    }
+  </style>
+</head>
+<body>
+
+  <model-viewer
+    src="sahurrr.glb"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+  ></model-viewer>
+
+  <!-- Importa el componente -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+</body>
+</html>
